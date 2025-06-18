@@ -8,4 +8,4 @@
 ├── 📄 Main.java              (López Reyes - 22/06)
 ├── 📄 ClienteTest.java       (Alfonso Ortega - 23/06)
 ├── 📄 PagoTest.java          (Alonso Pérez - 24/06)
-└── 📄 IntegracionTest.java   (López Reyes - 35/06)
+└── 📄 IntegracionTest.java   (López Reyes - 25/06)
