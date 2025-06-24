@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Factura {
+public class Factura implements IFactura {
     private String idFactura;
     private String idCliente;
     private double monto;
