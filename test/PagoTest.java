@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class PagoTest {
     @Test
     void testPagoExitoso() {
-        ETECSAFacturacionService servicio = new ETECSAFacturacionService();
+        FacturacionService servicio = new ETECSAFacturacionService();
         Factura factura = new Factura("F001", "C001", 100.0, new Date());
         servicio.registrarFactura(factura);
         
@@ -14,7 +14,7 @@ public class PagoTest {
 
     @Test
     void testPagoFacturaInexistente() {
-        ETECSAFacturacionService servicio = new ETECSAFacturacionService();
+        FacturacionService servicio = new ETECSAFacturacionService();
         assertFalse(servicio.realizarPago("F999"));
     }
 }
