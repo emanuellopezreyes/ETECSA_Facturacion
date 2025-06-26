@@ -6,7 +6,7 @@ import java.util.List;
  * Fecha de entrega: 14/06/2023
  */
 public interface FacturacionService {
-    void registrarFactura(Factura factura);
+    void registrarFactura(IFactura factura);
     boolean realizarPago(String idFactura);
-    List<Factura> consultarFacturasPorCliente(String idCliente);
+    List<IFactura> consultarFacturasPorCliente(String idCliente);
 }
