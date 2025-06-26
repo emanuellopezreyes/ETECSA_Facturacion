@@ -7,10 +7,10 @@ import java.util.List;
  * Fecha de entrega: 14/06/2023
  */
 public class ETECSAFacturacionService implements FacturacionService {
-    private List<Factura> facturas = new ArrayList<>();
+    private List<IFactura> facturas = new ArrayList<>();
 
     @Override
-    public void registrarFactura(Factura factura) {
+    public void registrarFactura(IFactura factura) {
         if (factura != null) {
             facturas.add(factura);
         }
@@ -18,7 +18,7 @@ public class ETECSAFacturacionService implements FacturacionService {
 
     @Override
     public boolean realizarPago(String idFactura) {
-        for (Factura factura : facturas) {
+        for (IFactura factura : facturas) {
             if (factura.getIdFactura().equals(idFactura)) {
                 factura.marcarComoPagada();
                 return true;
@@ -28,9 +28,9 @@ public class ETECSAFacturacionService implements FacturacionService {
     }
 
     @Override
-    public List<Factura> consultarFacturasPorCliente(String idCliente) {
-        List<Factura> resultado = new ArrayList<>();
-        for (Factura factura : facturas) {
+    public List<IFactura> consultarFacturasPorCliente(String idCliente) {
+        List<IFactura> resultado = new ArrayList<>();
+        for (IFactura factura : facturas) {
             if (factura.getIdCliente().equals(idCliente)) {
                 resultado.add(factura);
             }
