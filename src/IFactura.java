@@ -1,5 +1,3 @@
-package modelo;
-
 import java.util.Date;
 
 public interface IFactura {

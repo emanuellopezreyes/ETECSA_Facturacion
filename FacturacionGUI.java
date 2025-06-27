@@ -5,7 +5,7 @@ import java.util.Date;
 public class PagoTest {
     @Test
     public void testPagoExitoso() {
-        FacturacionService servicio = new ETECSAFacturacionService();
+        ETECSAFacturacionService servicio = new ETECSAFacturacionService();
         Factura factura = new Factura("F001", "C001", 100.0, new Date());
         servicio.registrarFactura(factura);
         
@@ -15,7 +15,7 @@ public class PagoTest {
 
     @Test
     public void testPagoFacturaInexistente() {
-        FacturacionService servicio = new ETECSAFacturacionService();
+        ETECSAFacturacionService servicio = new ETECSAFacturacionService();
         assertFalse(servicio.realizarPago("F999"));
     }
 }
